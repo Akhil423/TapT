@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.project.greenhat.tap_t.feed"
+    >
+        <LinearLayout
+            android:id="@+id/back_menu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+
+            >
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi"
+            android:textSize="@dimen/abc_text_size_title_material"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            />
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_title_material"
+                android:layout_marginLeft="20dp"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="60dp"
+                android:id="@+id/serc"
+                android:src="@drawable/searchs"
+           ></ImageView>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/logout"
+                android:src="@drawable/menu"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/search"
+        >
+        <android.support.v4.widget.ContentLoadingProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prog"
+            style="?android:attr/progressBarStyleLarge"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:id="@+id/backserch"
+            android:src="@drawable/backs"
+            android:layout_marginLeft="10dp"
+            />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/serch"
+            android:onClick="setDate"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/searchs"
+            android:id="@+id/sedb"
+            />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/list"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/back_menu_ll"
+        android:background="@color/tw__composer_deep_gray"
+        ></ListView>
+
+</LinearLayout>

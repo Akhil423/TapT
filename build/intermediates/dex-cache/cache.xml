@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/media/greenhat/storage/AndroidStudioProjects/Tap_T (copy)/app/libs/volley.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="/media/greenhat/storage/AndroidStudioProjects/Tap_T (copy)/app/build/intermediates/transforms/dex/debug/folders/1000/2/volley_ab0e2983f5842e521e92e2f4554c1bfd66179b81/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/greenhat/storage/AndroidStudioProjects/Tap_T (copy)/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/media/greenhat/storage/AndroidStudioProjects/Tap_T (copy)/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a22c6f84759330df0b840260c89b02f77c31e66a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/greenhat/storage/AndroidStudioProjects/Tap_T (copy)/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8affaa039bfa6c28b103e79c7203d52ac50e86">
+        <dex dex="/media/greenhat/storage/AndroidStudioProjects/Tap_T (copy)/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_4babb0576e6a71fb5e854c16106f0684265b7b62/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/greenhat/storage/AndroidStudioProjects/Tap_T (copy)/app/libs/twitter4j-core-4.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="381cf31e9200c2902782f17248d2af18e2ab4c56">
+        <dex dex="/media/greenhat/storage/AndroidStudioProjects/Tap_T (copy)/app/build/intermediates/transforms/dex/debug/folders/1000/2/twitter4j-core-4.0.2_43fbd3d52ced9d83acce91a96241b81a482b47fe/classes.dex" />
+    </item>
+
+</items>
