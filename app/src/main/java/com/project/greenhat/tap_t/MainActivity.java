@@ -441,7 +441,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             }
             catch (Exception e){
 
-                Log.d("Failed to post!", e.getMessage());
+                Log.d("Failed to fetch!", e.getMessage());
 
             }
 
