@@ -402,8 +402,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
 
 
-                Paging paging = new Paging(20);
-                List<twitter4j.Status> statuses = twitter.getHomeTimeline();
+                Paging paging = new Paging(2,20);
+                List<twitter4j.Status> statuses = twitter.getHomeTimeline(paging);
 
                 Log.d("count",String.valueOf(statuses.size()));
 
