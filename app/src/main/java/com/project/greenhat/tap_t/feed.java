@@ -178,9 +178,12 @@ public class feed extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.list);
 
+ Calendar c = Calendar.getInstance();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            String date = sdf.format(c.getTime());
 
 
-        inser();
+        inser(date);
 
         dateView = (EditText) findViewById(R.id.serch);
         calendar = Calendar.getInstance();
@@ -247,10 +250,14 @@ public class feed extends AppCompatActivity {
             };
 
     private void showDate(int year, int month, int day) {
-        dateView.setText(new StringBuilder().append(day).append("/").append(month).append("/").append(year));
+        if(month/10==0)
+        dateView.setText(new StringBuilder().append(day).append("/0").append(month).append("/").append(year));
+        else
+            dateView.setText(new StringBuilder().append(day).append("/").append(month).append("/").append(year));
+        feedItems.clear();
     }
 
-    public void inser() {
+    public void inser(String s) {
 
 
         database dba=new database(getApplicationContext(),"tapzo",null,3);
@@ -258,14 +265,11 @@ public class feed extends AppCompatActivity {
         try {
 
 
-            Calendar c = Calendar.getInstance();
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            String date = sdf.format(c.getTime());
-
+           
                 Cursor c2=null;
 
 
-                c2 = db1.rawQuery("select * from tstat where timestamp='"+date+"'", null);
+                c2 = db1.rawQuery("select * from tstat where timestamp='"+s+"'", null);
 
 
                 Log.d("here der", "netu");
@@ -286,13 +290,14 @@ public class feed extends AppCompatActivity {
                 listAdapter = new FeedList(this.getBaseContext(), feedItems);
                 listView.setAdapter(listAdapter);
 
+            db1.close();
             spinner.setVisibility(View.GONE);
 
 
         } catch (Exception e) {
 
 //
-            Log.d("Failed to post!", e.getMessage());
+            Log.d("Failed to Fetch!", e.getMessage());
 
         }
     }
