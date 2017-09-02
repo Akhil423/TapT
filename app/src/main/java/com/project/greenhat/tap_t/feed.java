@@ -250,8 +250,14 @@ public class feed extends AppCompatActivity {
             };
 
     private void showDate(int year, int month, int day) {
-        if(month/10==0)
-        dateView.setText(new StringBuilder().append(day).append("/0").append(month).append("/").append(year));
+        if(month/10==0){
+            if(day<10)
+        dateView.setText(new StringBuilder().append("0").append(day).append("/0").append(month).append("/").append(year));
+            else
+                dateView.setText(new StringBuilder().append(day).append("/0").append(month).append("/").append(year));
+        }
+        else if(day<10)
+             dateView.setText(new StringBuilder().append("0").append(day).append("/").append(month).append("/").append(year));
         else
             dateView.setText(new StringBuilder().append(day).append("/").append(month).append("/").append(year));
         feedItems.clear();
